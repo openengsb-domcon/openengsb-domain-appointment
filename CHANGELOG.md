@@ -1,3 +1,19 @@
+openengsb-domain-appointment-1.2.1 2011-05-22
+---------------------------------------------------------------------
+
+First support release of the Appointment Domain upgrading to the latest OpenEngSB Framework version and including bundle.info.
+
+** Library Upgrade
+    * [OPENENGSB-1508] - Push connectors and domains to latest openengsb-framework-1.3.0.M1
+    * [OPENENGSB-1609] - Upgrade openengsb-framework to 1.3.0.M2
+
+** New Feature
+    * [OPENENGSB-948] - Add OSGI-INF/bundle.info as used in Karaf to the openengsb bundles
+
+** Task
+    * [OPENENGSB-1418] - Release openengsb-domain-appointment-1.2.1
+
+
 openengsb-domain-appointment-1.2.0 2011-04-26
 ---------------------------------------------------------------------
 
