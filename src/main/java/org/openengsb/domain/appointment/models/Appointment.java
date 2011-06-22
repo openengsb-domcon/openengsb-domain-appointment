@@ -17,12 +17,17 @@
 
 package org.openengsb.domain.appointment.models;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
+import org.openengsb.core.api.model.OpenEngSBModel;
+import org.openengsb.core.api.model.OpenEngSBModelEntry;
 
 /**
  * Represents an appointment with all necessary information
  */
-public class Appointment {
+public class Appointment implements OpenEngSBModel {
     private String id;
     private String name;
     private String description;
@@ -30,6 +35,19 @@ public class Appointment {
     private Date start;
     private Date end;
     private boolean fullDay;
+
+    @Override
+    public List<OpenEngSBModelEntry> getOpenEngSBModelEntries() {
+        List<OpenEngSBModelEntry> entries = new ArrayList<OpenEngSBModelEntry>();
+        entries.add(new OpenEngSBModelEntry("id", id, String.class));
+        entries.add(new OpenEngSBModelEntry("name", name, String.class));
+        entries.add(new OpenEngSBModelEntry("description", description, String.class));
+        entries.add(new OpenEngSBModelEntry("location", location, String.class));
+        entries.add(new OpenEngSBModelEntry("start", start, Date.class));
+        entries.add(new OpenEngSBModelEntry("end", end, Date.class));
+        entries.add(new OpenEngSBModelEntry("fullDay", fullDay, Boolean.class));
+        return entries;
+    }
 
     public String getId() {
         return id;
