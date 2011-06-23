@@ -43,14 +43,16 @@
     <bean factory-ref="domainEventsProxyFactory" factory-method="getObject" />
   </service>
 
-  <bean id="domainEventsProxyFactory" class="org.openengsb.core.common.events.EDBEventsProxyFactoryBean">
+  <bean id="domainEventsProxyFactory" class="org.openengsb.core.common.events.DomainEventsProxyFactoryBean">
     <property name="domainEventInterface">
         <value>org.openengsb.domain.appointment.AppointmentDomainEvents</value>
       </property>
     <property name="edbService" ref="edbService" />
+    <property name="workflowService" ref="workflowService" />
   </bean>
 
   <reference id="contextService" interface="org.openengsb.core.api.context.ContextService" />
+  <reference id="workflowService" interface="org.openengsb.core.api.workflow.WorkflowService" />
   <reference id="edbService" interface="org.openengsb.core.api.edb.EnterpriseDatabaseService" />
   
 </blueprint>
