@@ -18,16 +18,6 @@
 package org.openengsb.domain.appointment;
 
 import org.openengsb.core.api.DomainEvents;
-import org.openengsb.core.api.edb.EDBCreateEvent;
-import org.openengsb.core.api.edb.EDBDeleteEvent;
-import org.openengsb.core.api.edb.EDBUpdateEvent;
 
 public interface AppointmentDomainEvents extends DomainEvents {
-    
-    void raiseEvent(EDBCreateEvent e);
-
-    void raiseEvent(EDBDeleteEvent e);
-
-    void raiseEvent(EDBUpdateEvent e);
-
 }
