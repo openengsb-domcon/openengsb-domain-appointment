@@ -50,7 +50,7 @@ public interface Appointment extends OpenEngSBModel {
 
     void setEnd(Date end);
 
-    void setFullDay(boolean fullDay);
+    void setFullDay(Boolean fullDay);
 
-    boolean isFullDay();
+    Boolean getFullDay();
 }
