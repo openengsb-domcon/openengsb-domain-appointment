@@ -17,91 +17,40 @@
 
 package org.openengsb.domain.appointment.models;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.openengsb.core.api.model.OpenEngSBModel;
-import org.openengsb.core.api.model.OpenEngSBModelEntry;
 
 /**
  * Represents an appointment with all necessary information
  */
-public class Appointment implements OpenEngSBModel {
-    private String id;
-    private String name;
-    private String description;
-    private String location;
-    private Date start;
-    private Date end;
-    private boolean fullDay;
+public interface Appointment extends OpenEngSBModel {
+    
+    String getId();
 
-    @Override
-    public List<OpenEngSBModelEntry> getOpenEngSBModelEntries() {
-        List<OpenEngSBModelEntry> entries = new ArrayList<OpenEngSBModelEntry>();
-        entries.add(new OpenEngSBModelEntry("id", id, String.class));
-        entries.add(new OpenEngSBModelEntry("name", name, String.class));
-        entries.add(new OpenEngSBModelEntry("description", description, String.class));
-        entries.add(new OpenEngSBModelEntry("location", location, String.class));
-        entries.add(new OpenEngSBModelEntry("start", start, Date.class));
-        entries.add(new OpenEngSBModelEntry("end", end, Date.class));
-        entries.add(new OpenEngSBModelEntry("fullDay", fullDay, Boolean.class));
-        return entries;
-    }
+    void setId(String id);
 
-    public String getId() {
-        return id;
-    }
+    String getName();
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    void setName(String name);
 
-    public String getName() {
-        return name;
-    }
+    String getDescription();
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    void setDescription(String description);
 
-    public String getDescription() {
-        return description;
-    }
+    String getLocation();
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    void setLocation(String location);
 
-    public String getLocation() {
-        return location;
-    }
+    Date getStart();
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
+    void setStart(Date start);
 
-    public Date getStart() {
-        return start;
-    }
+    Date getEnd();
 
-    public void setStart(Date start) {
-        this.start = start;
-    }
+    void setEnd(Date end);
 
-    public Date getEnd() {
-        return end;
-    }
+    void setFullDay(boolean fullDay);
 
-    public void setEnd(Date end) {
-        this.end = end;
-    }
-
-    public void setFullDay(boolean fullDay) {
-        this.fullDay = fullDay;
-    }
-
-    public boolean isFullDay() {
-        return fullDay;
-    }
+    boolean isFullDay();
 }
