@@ -20,6 +20,7 @@ package org.openengsb.domain.appointment.models;
 import java.util.Date;
 
 import org.openengsb.core.api.model.OpenEngSBModel;
+import org.openengsb.core.api.model.OpenEngSBModelId;
 
 /**
  * Represents an appointment with all necessary information
@@ -28,6 +29,7 @@ public interface Appointment extends OpenEngSBModel {
     
     String getId();
 
+    @OpenEngSBModelId
     void setId(String id);
 
     String getName();
