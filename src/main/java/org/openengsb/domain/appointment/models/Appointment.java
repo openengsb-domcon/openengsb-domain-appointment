@@ -19,71 +19,40 @@ package org.openengsb.domain.appointment.models;
 
 import java.util.Date;
 
+import org.openengsb.core.api.model.OpenEngSBModel;
+import org.openengsb.core.api.model.OpenEngSBModelId;
+
 /**
  * Represents an appointment with all necessary information
  */
-public class Appointment {
-    private String id;
-    private String name;
-    private String description;
-    private String location;
-    private Date start;
-    private Date end;
-    private boolean fullDay;
+public interface Appointment extends OpenEngSBModel {
+    
+    String getId();
 
-    public String getId() {
-        return id;
-    }
+    @OpenEngSBModelId
+    void setId(String id);
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    String getName();
 
-    public String getName() {
-        return name;
-    }
+    void setName(String name);
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    String getDescription();
 
-    public String getDescription() {
-        return description;
-    }
+    void setDescription(String description);
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    String getLocation();
 
-    public String getLocation() {
-        return location;
-    }
+    void setLocation(String location);
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
+    Date getStart();
 
-    public Date getStart() {
-        return start;
-    }
+    void setStart(Date start);
 
-    public void setStart(Date start) {
-        this.start = start;
-    }
+    Date getEnd();
 
-    public Date getEnd() {
-        return end;
-    }
+    void setEnd(Date end);
 
-    public void setEnd(Date end) {
-        this.end = end;
-    }
+    void setFullDay(Boolean fullDay);
 
-    public void setFullDay(boolean fullDay) {
-        this.fullDay = fullDay;
-    }
-
-    public boolean isFullDay() {
-        return fullDay;
-    }
+    Boolean getFullDay();
 }
