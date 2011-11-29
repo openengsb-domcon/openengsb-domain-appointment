@@ -31,7 +31,7 @@
   <properties>
     <bundle.symbolicName>org.openengsb.domain.appointment</bundle.symbolicName>
     <bundle.namespace>org.openengsb.domain.appointment</bundle.namespace>
-    <openengsb.framework.version>2.0.3</openengsb.framework.version>
+    <openengsb.framework.version>2.1.2</openengsb.framework.version>
   </properties>
 
   <groupId>org.openengsb.domain</groupId>
