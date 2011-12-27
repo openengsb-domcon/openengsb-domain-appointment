@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.openengsb.domain.appointment.models;
+package org.openengsb.domain.appointment;
 
 import java.util.Date;
 

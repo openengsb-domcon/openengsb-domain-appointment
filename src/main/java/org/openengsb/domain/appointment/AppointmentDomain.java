@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import org.openengsb.core.api.Domain;
-import org.openengsb.domain.appointment.models.Appointment;
 
 // @extract-start AppointmentDomain
 /**
