@@ -19,5 +19,7 @@ package org.openengsb.domain.appointment;
 
 import org.openengsb.core.api.DomainEvents;
 
+// @extract-start AppointmentDomainEvents
 public interface AppointmentDomainEvents extends DomainEvents {
 }
+// @extract-end

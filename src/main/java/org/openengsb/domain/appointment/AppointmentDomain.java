@@ -23,6 +23,7 @@ import java.util.Date;
 import org.openengsb.core.api.Domain;
 import org.openengsb.domain.appointment.models.Appointment;
 
+// @extract-start AppointmentDomain
 /**
  * This domain is used to integrate different calendar programs. It can create, update, delete and
  * retrieve Appointments.
@@ -48,10 +49,11 @@ public interface AppointmentDomain extends Domain {
      * loads an appointment
      */
     Appointment loadAppointment(String id);
-    
+
     /**
      * Returns a list of appointments which are lying between the given start and end time.
      */
     ArrayList<Appointment> getAppointments(Date start, Date end);
 }
+// @extract-end
 
