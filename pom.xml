@@ -32,7 +32,7 @@
   <properties>
     <bundle.symbolicName>org.openengsb.domain.appointment</bundle.symbolicName>
     <bundle.namespace>org.openengsb.domain.appointment</bundle.namespace>
-    <domain.name>Appointment</domain.name>
+    <domain.name>AppointmentDomain</domain.name>
     <openengsb.framework.version>2.1.2</openengsb.framework.version>
   </properties>
 
