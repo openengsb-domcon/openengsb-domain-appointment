@@ -47,7 +47,7 @@
   <description>
     Appointment Domain is an abstraction of basic appointment services (e.g. doodle)
   </description>
-
+  
   <url>http://www.openengsb.org</url>
 
   <licenses>
@@ -57,12 +57,24 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  
+  <inceptionYear>2010</inceptionYear>
 
   <scm>
     <connection>scm:git:git://github.com/openengsb/openengsb-domain-appointment.git</connection>
     <developerConnection>scm:git:git@github.com:openengsb/openengsb-domain-appointment.git</developerConnection>
     <url>http://github.com/openengsb/openengsb-domain-appointment</url>
   </scm>
+  
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://issues.openengsb.org/jira/browse/OPENENGSB</url>
+  </issueManagement>
+
+  <ciManagement>
+    <system>OpenCIT</system>
+    <url>http://build.openengsb.org/opencit/</url>
+  </ciManagement>
 
   <build>
     <plugins>
