@@ -129,10 +129,10 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-        <groupId>org.openengsb.labs.delegation</groupId>
-        <artifactId>org.openengsb.labs.delegation.service</artifactId>
-        <version>${labs.delegation.version}</version>
-      </dependency>
+      <groupId>org.openengsb.labs.delegation</groupId>
+      <artifactId>org.openengsb.labs.delegation.service</artifactId>
+      <version>${labs.delegation.version}</version>
+    </dependency>
   </dependencies>
 
   <repositories>
