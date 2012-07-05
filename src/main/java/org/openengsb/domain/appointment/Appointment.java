@@ -19,40 +19,79 @@ package org.openengsb.domain.appointment;
 
 import java.util.Date;
 
-import org.openengsb.core.api.model.OpenEngSBModel;
-import org.openengsb.core.api.model.OpenEngSBModelId;
+import org.openengsb.core.api.Constants;
+import org.openengsb.core.api.model.annotation.Model;
+import org.openengsb.core.api.model.annotation.OpenEngSBModelId;
+import org.openengsb.labs.delegation.service.Provide;
 
 /**
- * Represents an appointment with all necessary information
+ * Represents an appointment with all necessary informations
  */
-public interface Appointment extends OpenEngSBModel {
-    
-    String getId();
-
+@Provide(context = { Constants.DELEGATION_CONTEXT_MODELS })
+@Model
+public class Appointment {
     @OpenEngSBModelId
-    void setId(String id);
+    private String id;
+    private String name;
+    private String description;
+    private String location;
+    private Date start;
+    private Date end;
+    private Boolean fullDay;
 
-    String getName();
+    public String getId() {
+        return id;
+    }
 
-    void setName(String name);
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    String getDescription();
+    public String getName() {
+        return name;
+    }
 
-    void setDescription(String description);
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    String getLocation();
+    public String getDescription() {
+        return description;
+    }
 
-    void setLocation(String location);
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-    Date getStart();
+    public String getLocation() {
+        return location;
+    }
 
-    void setStart(Date start);
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
-    Date getEnd();
+    public Date getStart() {
+        return start;
+    }
 
-    void setEnd(Date end);
+    public void setStart(Date start) {
+        this.start = start;
+    }
 
-    void setFullDay(Boolean fullDay);
+    public Date getEnd() {
+        return end;
+    }
 
-    Boolean getFullDay();
+    public void setEnd(Date end) {
+        this.end = end;
+    }
+
+    public Boolean getFullDay() {
+        return fullDay;
+    }
+
+    public void setFullDay(Boolean fullDay) {
+        this.fullDay = fullDay;
+    }
 }
